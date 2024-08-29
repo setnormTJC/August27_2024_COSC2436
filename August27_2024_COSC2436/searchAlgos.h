@@ -12,8 +12,11 @@ This is a SEQUENTIAL search algorithm
 template<typename T> 
 bool sequential_search(const vector<T>& listOfThings, const T& searchValue)
 {
+	//int comparisonCount = 0; 
 	for (int i = 0; i < listOfThings.size(); i++)
 	{
+		//comparisonCount++; 
+
 		if (listOfThings[i] == searchValue)
 		{
 			cout << "Found! at index = " << i << "\n";
