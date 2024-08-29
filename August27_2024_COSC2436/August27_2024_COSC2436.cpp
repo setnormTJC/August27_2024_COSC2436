@@ -1,7 +1,6 @@
 #include<iostream> 
 
-//#include<array>
-//int nums[10]
+
 #include<vector> 
 
 #include<string>
@@ -14,6 +13,7 @@
 #include<chrono> 
 
 //using namespace std; 
+
 
 ////mini review of last semester
 //class Person
@@ -77,32 +77,45 @@
 //
 //};
 
+//unit testing 
+vector<int> generateNRandomNumbers_between1AndN(int N)
+{
+	vector<int> randomNumbers; 
+
+	std::mt19937 engine(time(0));
+	std::uniform_int_distribution<int> randomDistribution(0, N);
+
+	for (int i = 0; i < N; i++)
+	{
+		randomNumbers.push_back(randomDistribution(engine));
+	}
+
+	return randomNumbers;
+}
+
+void printVec(const vector<int>& nums)
+{
+	for (auto& num : nums)
+	{
+		cout << num << " ";
+	}
+	cout << "\n";
+}
+
 int main()
 {
 	//Person me{ "seth", 36 };
 
 	//me.print(); 
-	//std::mt19937 engine(time(0)); 
 
-	//std::uniform_int_distribution<int> randomDistribution(0, 100); 
+	int N = 100; 
+	auto vec1000 = generateNRandomNumbers_between1AndN(N);
+	printVec(vec1000);
 
-	//for (int i = 0; i < 100; i++)
-	//{
-	//	std::cout << randomDistribution(engine) << "\n";
-	//}
+	sequential_search(vec1000, 323);
 
-	adsfasdfadsf
-
-	vector<string> peopleInMyContactList =
-	{
-		"Alice", "Carol", "Bob", "Darth", "Frank", "Eve"
-	};
-
-	vector<int> listOfNums =
-	{
-		485, 36549, 193750, 837365, 5
-	};
-
+	//"edge case"
+	
 	//start a timer: 
 
 	//execute an algorithm 
@@ -112,24 +125,24 @@ int main()
 	//display the amount of time it took 
 
 
-	while (true)
-	{
-		cout << "Enter a NUMBER to search for: \n";
-		int targetNumber;
-		cin >> targetNumber;
+	//while (true)
+	//{
+	//	cout << "Enter a NUMBER to search for: \n";
+	//	int targetNumber;
+	//	cin >> targetNumber;
 
-		if (search(listOfNums, targetNumber))
-		{
-			cout << "number was found!\n";
-		}
+	//	if (search(listOfNums, targetNumber))
+	//	{
+	//		cout << "number was found!\n";
+	//	}
 
-		else
-		{
-			cout << "Not found :(\n";
-		}
+	//	else
+	//	{
+	//		cout << "Not found :(\n";
+	//	}
 
 
-	}
+	//}
 
 	return 0; 
 }
