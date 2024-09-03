@@ -96,14 +96,6 @@ vector<int> generateNRandomNumbers_between1AndN(int N)
 	return randomNumbers;
 }
 
-void printVec(const vector<int>& nums)
-{
-	for (auto& num : nums)
-	{
-		cout << num << " ";
-	}
-	cout << "\n";
-}
 
 int main()
 {
@@ -116,10 +108,8 @@ int main()
 
 	for (N = 100; N <= 1'000'000; N = N * 10)
 	{
-		//cout << N << "\n";
 		double averageTime = 0; 
-		for (int i = 0; i < 10; i++)
-		{
+		for (int i = 0; i < 10; i++){
 			auto vecN = generateNRandomNumbers_between1AndN(N);
 
 			std::chrono::seconds duration(1);
@@ -129,13 +119,9 @@ int main()
 			std::uniform_int_distribution<int> randomDistribution(0, N);
 
 			int searchValue = randomDistribution(engine);
-
 			auto startTime = std::chrono::high_resolution_clock::now();
-
 			//execute an algorithm 
-
 			sequential_search(vecN, searchValue); //323 is a "worst case scenario" 
-
 			//stop clock 
 			auto stopTime = std::chrono::high_resolution_clock::now();
 
