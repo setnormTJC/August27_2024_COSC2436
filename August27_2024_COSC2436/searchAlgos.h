@@ -19,12 +19,12 @@ bool sequential_search(const vector<T>& listOfThings, const T& searchValue)
 
 		if (listOfThings[i] == searchValue)
 		{
-			cout << "Found! at index = " << i << "\n";
+			//cout << "Found! at index = " << i << "\n";
 			return true; 
 		}
 	}
 	 
-	cout << "NOT found\n";
+	//cout << "NOT found\n";
 	return false; 
 }
 
