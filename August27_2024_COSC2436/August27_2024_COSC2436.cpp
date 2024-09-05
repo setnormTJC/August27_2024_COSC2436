@@ -79,22 +79,7 @@
 //};
 
 //unit testing 
-vector<int> generateNRandomNumbers_between1AndN(int N)
-{
-	vector<int> randomNumbers; 
 
-	std::mt19937 engine(time(0));
-	std::uniform_int_distribution<int> randomDistribution(0, N); //inclusive
-
-	for (int i = 0; i < N; i++)
-	{
-		randomNumbers.push_back(randomDistribution(engine));
-
-		//rand() % 100 //less preferable approach
-	}
-
-	return randomNumbers;
-}
 
 
 int main()

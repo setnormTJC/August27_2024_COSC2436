@@ -7,21 +7,36 @@
 
 #include"../August27_2024_COSC2436/searchAlgos.h"
 
+
+
 int main()
 {
     //binary
 
-    vector<int> nums =
-    {
-        8, 6, 7, 5, 3, 0, 9
-    }; 
+    //vector<int> nums =
+    //{
+    //    8, 6, 7, 5, 3, 0, 9
+    //}; 
+    const int N = 8096; //O(
+
+    auto nums = generateNRandomNumbers_between1AndN(N); 
+
+    printVec(nums); 
+
     //sort the vector and then print 
     //std::binary_
     std::sort(nums.begin(), nums.end());
 
-    int targetValue = 9999999999; 
+    cout << "Sorted?\n";
+    printVec(nums); 
 
-    cout << "Found? at index = " << binarySearch(nums, targetValue);
+    //0, 3, 5, 6, 7, 8, 9 
+    int targetValue = N + 2; 
+    //O(log(N)) -> better than O(N) 
+    // 
+    //binary search is generally FASTER than sequential search
+
+    cout << "Found " << targetValue << "?  at index = " << binarySearch(nums, targetValue);
 
     //vector<string> names =
     //{
