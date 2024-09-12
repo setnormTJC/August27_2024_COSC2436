@@ -4,88 +4,91 @@
 
 #include"../August27_2024_COSC2436/searchAlgos.h"
 
+#include"sortinAlgos.h"
+
+
 using namespace std;
 
-/*average complexity of bubble sort is O(N^2)*/
-void inplaceSort(vector<int>& nums)
+bool isSorted(const std::vector<int>& nums)
 {
-    for (int blueArrow = 0; blueArrow < nums.size(); blueArrow++)
+    for (int i = 0; i < nums.size() - 1; i++)
     {
-        for (int greenArrow = blueArrow + 1; greenArrow < nums.size(); greenArrow++)
+        if (nums[i] > nums[i + 1])
         {
-            if (nums[blueArrow] > nums[greenArrow]) //"comparison" (we will COUNT this later) 
-            {
-                std::swap(nums[blueArrow], nums[greenArrow]);
-            }
+            return false;
         }
     }
-}
-//O(N^2)?
-
-
-void mySwap(vector<int>& nums, int firstIndex, int secondIndex)
-{
-    int temporary = nums[firstIndex]; 
-
-    nums[firstIndex] = nums[secondIndex];
-
-    nums[secondIndex] = temporary; 
+    return true;
 }
 
-int findMinimum(const vector<int>& unsortedNums)
-{
-    int theSmallestOne = unsortedNums[0]; 
 
-    for (auto& num : unsortedNums)
+void bogoSort(vector<int>& nums)
+{
+    int attemptCount = 0; 
+    while (!isSorted(nums))
     {
-        if (num < theSmallestOne)
+        for (int i = 0; i < nums.size(); i++)
         {
-            theSmallestOne = num; 
+            std::swap(nums[i], nums[rand() % nums.size()]);
         }
-    }
-    //what is the AVERAGE complexity of THIS algorithm?  -> O(N) 
-    return theSmallestOne;
-}
 
-auto outOfPlaceSort(vector<int> unsortedNums)
-{
-    vector<int> SORTEDnums; 
-
-    while (!unsortedNums.empty())
-    {
-        int currentMin = findMinimum(unsortedNums); 
-
-        SORTEDnums.push_back(currentMin); 
-        auto positionOfCurrentMin = std::find(unsortedNums.begin(), unsortedNums.end(), currentMin);
-        unsortedNums.erase(positionOfCurrentMin);
-
+        attemptCount++; 
+        printVec(nums); 
+        cout << "\n\n";
     }
 
-    return SORTEDnums; 
+    cout << "It took this many shuffles: " << attemptCount << "\n";
 }
+
 
 
 int main()
 {
-    vector<int> unsortedNums = { 3, 5, 9, 4, 6, 2 };
-    
-    cout << "Testing swap of indices 2 and 3 ...\n";
-    mySwap(unsortedNums, 2, 3);
-    //cout << "BEFORE swap of indices 0 and 1: \n";
-    printVec(unsortedNums); 
+    srand(time(0)); 
 
-    //auto SORTEDnums = outOfPlaceSort(unsortedNums);
-    //std::swap(nums[0], nums[1]); 
-    //cout << "AFTER swap of indices 0 and 1: \n";
-    //printVec(nums);
+    //for ()
+    //vector<int> unsortedNums = { 3, 5, 9, 4, 6, 2 };
+    // 
+    const int N = 5; 
 
-    inplaceSort(unsortedNums); 
-    //cout << "Did the out of place (space inefficient) sort work?\n";
-    cout << "Did the inplace sort work?\n";
-    printVec(unsortedNums);
+    vector<int> randomUnsortedNums = generateNRandomNumbers_between1AndN(N); 
+    
+    bogoSort(randomUnsortedNums); 
+
+    //cout << "RANDOMS (average data set): \n";
+    //inplaceSort(randomUnsortedNums);
+
+    //cout << std::boolalpha << isSorted(randomUnsortedNums) << "\n";
 
     
+    //vector<int> alreadySortedNums; 
+
+    //for (int i = 0; i < N; i++) 
+    //{
+    //    alreadySortedNums.push_back(i); 
+    //}
+
+    //cout << std::boolalpha << isSorted(alreadySortedNums) << "\n";
+    //cout << "\n\nALREADY sorted (best case data set)\n";
+    //inplaceSort(alreadySortedNums);
+
+
+    //cout << "\n\nREVERSED order (worst case):\n";
+    //vector<int> reverseSortedNums; 
+    //for (int i = N - 1; i >= 0; i--)
+    //{
+    //    reverseSortedNums.push_back(i); 
+    //}
+    //inplaceSort(reverseSortedNums); 
     
+
+    //printVec(randomUnsortedNums); 
+
+
+    //cout << "Did the inplace sort work?\n";
+    //printVec(randomUnsortedNums);
+
+       
     //std::sort()//this is O(N*log(N)) -> better than O(N^2)
 
     return 0;

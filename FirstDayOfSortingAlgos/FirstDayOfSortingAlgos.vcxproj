@@ -130,6 +130,9 @@
   <ItemGroup>
     <ClCompile Include="FirstDayOfSortingAlgos.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sortinAlgos.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
