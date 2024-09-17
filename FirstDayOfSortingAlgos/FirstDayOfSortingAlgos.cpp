@@ -1,7 +1,8 @@
 #include <iostream>
 #include <vector>
 
-
+//#include<Windows.h>
+#include<chrono>
 #include"../August27_2024_COSC2436/searchAlgos.h"
 
 #include"sortinAlgos.h"
@@ -9,47 +10,39 @@
 
 using namespace std;
 
-bool isSorted(const std::vector<int>& nums)
-{
-    for (int i = 0; i < nums.size() - 1; i++)
-    {
-        if (nums[i] > nums[i + 1])
-        {
-            return false;
-        }
-    }
-    return true;
-}
 
-
-void bogoSort(vector<int>& nums)
-{
-    int attemptCount = 0; 
-    while (!isSorted(nums))
-    {
-        for (int i = 0; i < nums.size(); i++)
-        {
-            std::swap(nums[i], nums[rand() % nums.size()]);
-        }
-
-        attemptCount++; 
-        printVec(nums); 
-        cout << "\n\n";
-    }
-
-    cout << "It took this many shuffles: " << attemptCount << "\n";
-}
 
 
 
 int main()
 {
+    int otherN = 10'000; 
+    vector<int> vecN = generateNRandomNumbers_between1AndN(otherN); 
+
+    //std::sort(vecN.begin(), vecN.end()); //std::sort is often a "quicksort" (recursive) 
+    auto startTime = std::chrono::high_resolution_clock::now(); 
+    //inplaceSort(vecN); //O(N^2)
+    
+    std::sort(vecN.begin(), vecN.end());
+
+    auto stopTime = std::chrono::high_resolution_clock::now();
+
+
+    cout << "It took this many nanoseconds (for the (N^2) sorting algo) to sort " << otherN
+        << "randomly-generated nums: " << (stopTime - startTime).count() << "\n";
+    cout << "...Done!\n";
+    //printVec(unsortedNumbers);
+
+
+    system("pause"); 
+
     srand(time(0)); 
 
     //for ()
     //vector<int> unsortedNums = { 3, 5, 9, 4, 6, 2 };
     // 
-    const int N = 5; 
+    
+    const int N = 10; 
 
     vector<int> randomUnsortedNums = generateNRandomNumbers_between1AndN(N); 
     

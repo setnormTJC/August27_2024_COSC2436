@@ -24,6 +24,7 @@
     <ProjectGuid>{4fc5c035-33e6-40b5-9f99-7f85a83b7147}</ProjectGuid>
     <RootNamespace>August272024COSC2436</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>SequentialSearchStuff</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "August27_2024_COSC2436", "August27_2024_COSC2436\August27_2024_COSC2436.vcxproj", "{4FC5C035-33E6-40B5-9F99-7F85A83B7147}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SequentialSearchStuff", "August27_2024_COSC2436\August27_2024_COSC2436.vcxproj", "{4FC5C035-33E6-40B5-9F99-7F85A83B7147}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PracticeLecture_August29", "PracticeLecture_August29\PracticeLecture_August29.vcxproj", "{1699032A-0BAC-482A-B3B7-878E88847A3C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestingBinarySearchAlgo", "TestingBinarySearchAlgo\TestingBinarySearchAlgo.vcxproj", "{EEB3BC6C-AC06-4D95-BA68-77705378AF49}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OneStudentSubmissionOfSeqSearchAlgo", "OneStudentSubmissionOfSeqSearchAlgo\OneStudentSubmissionOfSeqSearchAlgo.vcxproj", "{1EC47C82-3FF3-4A23-9B95-D9E980CFB0D7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OneStudentSubmissionOfSeqSearchAssignment", "OneStudentSubmissionOfSeqSearchAlgo\OneStudentSubmissionOfSeqSearchAlgo.vcxproj", "{1EC47C82-3FF3-4A23-9B95-D9E980CFB0D7}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FirstDayOfSortingAlgos", "FirstDayOfSortingAlgos\FirstDayOfSortingAlgos.vcxproj", "{68942DB6-8560-4149-963C-ABE6F354C3AE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestingMonkeySort", "TestingMonkeySort\TestingMonkeySort.vcxproj", "{253BA4EE-9A5F-422D-9F3E-6CF61FB7A440}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,14 @@ Global
 		{68942DB6-8560-4149-963C-ABE6F354C3AE}.Release|x64.Build.0 = Release|x64
 		{68942DB6-8560-4149-963C-ABE6F354C3AE}.Release|x86.ActiveCfg = Release|Win32
 		{68942DB6-8560-4149-963C-ABE6F354C3AE}.Release|x86.Build.0 = Release|Win32
+		{253BA4EE-9A5F-422D-9F3E-6CF61FB7A440}.Debug|x64.ActiveCfg = Debug|x64
+		{253BA4EE-9A5F-422D-9F3E-6CF61FB7A440}.Debug|x64.Build.0 = Debug|x64
+		{253BA4EE-9A5F-422D-9F3E-6CF61FB7A440}.Debug|x86.ActiveCfg = Debug|Win32
+		{253BA4EE-9A5F-422D-9F3E-6CF61FB7A440}.Debug|x86.Build.0 = Debug|Win32
+		{253BA4EE-9A5F-422D-9F3E-6CF61FB7A440}.Release|x64.ActiveCfg = Release|x64
+		{253BA4EE-9A5F-422D-9F3E-6CF61FB7A440}.Release|x64.Build.0 = Release|x64
+		{253BA4EE-9A5F-422D-9F3E-6CF61FB7A440}.Release|x86.ActiveCfg = Release|Win32
+		{253BA4EE-9A5F-422D-9F3E-6CF61FB7A440}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

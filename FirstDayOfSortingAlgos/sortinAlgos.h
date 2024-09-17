@@ -67,3 +67,51 @@ auto outOfPlaceSort(vector<int> unsortedNums)
 
     return SORTEDnums;
 }
+
+
+bool isSorted(const std::vector<int>& nums)
+{
+    for (int i = 0; i < nums.size() - 1; i++)
+    {
+        if (nums[i] > nums[i + 1])
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+/*
+* @return the number of shuffles required before sorting is accomplished
+*/
+int bogoSort(vector<int>& nums)
+{
+    int attemptCount = 0;
+    while (!isSorted(nums))
+    {
+        //the loop below is an implementation of a `shuffle` algorithm
+        for (int i = 0; i < nums.size(); i++)
+        {
+            std::swap(nums[i], nums[rand() % nums.size()]);
+        }
+
+        attemptCount++;
+        //printVec(nums);
+        //cout << "\n\n";
+    }
+
+    cout << "It took this many shuffles: " << attemptCount << "\n";
+
+    return attemptCount; 
+}
+
+/*O(infinity) - > do NOT use!
+BEST case complexity: O(1) */
+//AVERAGE complexity O(infinity)
+void miracleSort(vector<int> unsortedNums)
+{
+    while (!isSorted(unsortedNums))
+    {
+        //do nothing and pray 
+    }
+}
