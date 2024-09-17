@@ -12,12 +12,12 @@
 int main()
 {
     const int N = 5; 
-    auto vecN = generateNRandomNumbers_between1AndN(N); 
+    auto vecN = generateNRandomNumbers_between1AndN(N + 1); 
 
     auto copyOfVecN = vecN; 
 
     vector<int> shuffleCounts; 
-    for (int i = 0; i < 1000; i++)
+    for (int i = 0; i < 10'000; i++)
     {
 
         shuffleCounts.push_back(bogoSort(vecN));

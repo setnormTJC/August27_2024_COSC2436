@@ -1,6 +1,7 @@
 #pragma once
 
 #include<vector>
+#include<algorithm>
 
 /*average complexity of bubble sort is O(N^2)*/
 void inplaceSort(vector<int>& nums)
@@ -92,6 +93,7 @@ int bogoSort(vector<int>& nums)
         //the loop below is an implementation of a `shuffle` algorithm
         for (int i = 0; i < nums.size(); i++)
         {
+            //std::random_shuffle(nums.begin(), nums.end()); 
             std::swap(nums[i], nums[rand() % nums.size()]);
         }
 

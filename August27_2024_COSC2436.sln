@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FirstDayOfSortingAlgos", "F
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestingMonkeySort", "TestingMonkeySort\TestingMonkeySort.vcxproj", "{253BA4EE-9A5F-422D-9F3E-6CF61FB7A440}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SortingObjectsOfAClass", "SortingObjectsOfAClass\SortingObjectsOfAClass.vcxproj", "{379E4B55-BC7B-4E2B-ADB6-69B509E89B81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{253BA4EE-9A5F-422D-9F3E-6CF61FB7A440}.Release|x64.Build.0 = Release|x64
 		{253BA4EE-9A5F-422D-9F3E-6CF61FB7A440}.Release|x86.ActiveCfg = Release|Win32
 		{253BA4EE-9A5F-422D-9F3E-6CF61FB7A440}.Release|x86.Build.0 = Release|Win32
+		{379E4B55-BC7B-4E2B-ADB6-69B509E89B81}.Debug|x64.ActiveCfg = Debug|x64
+		{379E4B55-BC7B-4E2B-ADB6-69B509E89B81}.Debug|x64.Build.0 = Debug|x64
+		{379E4B55-BC7B-4E2B-ADB6-69B509E89B81}.Debug|x86.ActiveCfg = Debug|Win32
+		{379E4B55-BC7B-4E2B-ADB6-69B509E89B81}.Debug|x86.Build.0 = Debug|Win32
+		{379E4B55-BC7B-4E2B-ADB6-69B509E89B81}.Release|x64.ActiveCfg = Release|x64
+		{379E4B55-BC7B-4E2B-ADB6-69B509E89B81}.Release|x64.Build.0 = Release|x64
+		{379E4B55-BC7B-4E2B-ADB6-69B509E89B81}.Release|x86.ActiveCfg = Release|Win32
+		{379E4B55-BC7B-4E2B-ADB6-69B509E89B81}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
